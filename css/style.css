@@ -1,4 +1,15 @@
+html, body {
+  background-color:lightblue;
+  margin:0px;
+  padding:0px;
+}
+
 .hello {
-  background-color:pink;
-  font-family: 'Bangers', cursive;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 100px;
+  width: 30%;
+  padding-left:20px;
+  margin-left:20px;
+  border: solid;
+  background: pink;
 }
