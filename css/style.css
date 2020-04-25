@@ -8,68 +8,133 @@ body {
   /* Location of the image */
   background: url("../resources/Flaming_star_nebula.jpg") no-repeat center center;
   /* Background image is fixed in the viewport so that it doesn't move when 
-     the content's height is greater than the image's height */
+    the content's height is greater than the image's height */
   background-attachment: fixed;
   
   /* This is what makes the background image rescale based
-     on the container's size */
+    on the container's size */
   background-size: cover;
 
   /* Set a background color that will be displayed
-     while the background image is loading */
+    while the background image is loading */
   background-color:lightblue;
 
+  align-items: center;
+  text-align: center;
   display: grid;
   height: 100%;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 2fr 3fr;
-  align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   justify-items: center;
 }
 
 .hello {
   font-family: 'Bungee Shade', sans-serif;
-  font-size: 6vw;
+  font-size: 15vw;
   border: solid;
   border-radius: 25px;
   background: pink;
-  grid-column:3/5;
-  grid-row-start:2;
-  width: 100%;
-  text-align:center;
-  margin-bottom:2vw;
+  text-align: center;
+  padding: 0;
+  grid-row-start: 1;
 }
 
 a:link, a:visited {
   border-radius: 25px;
+  padding : 2vw 2vw;
   border: solid;
   border-color: black;
   background: pink;
   color: black;
-  padding: 15px 32px;
-  text-align: center;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
   text-decoration: none;
   font-family: 'Orbitron', sans-serif;
-  font-size: 2vw;
-  width:8vw;
+  font-size: 7vw;
   text-align:center;
   cursor: pointer;
   display: inline-block;
 }
-
-a:hover, a:active {
- background-color: lightblue;
-}
-
-.github {
-  grid-column:3;
-  grid-row-start:3;
+.octo {
+  max-width: 45vw;
+  height: auto;
+  grid-row-start: 2;
 }
 
 .resume {
-  grid-column:4;
-  grid-row-start:3;
-  
+  grid-row-start: 3;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+  body {
+    /* Location of the image */
+    background: url("../resources/Flaming_star_nebula.jpg") no-repeat center center;
+    /* Background image is fixed in the viewport so that it doesn't move when 
+      the content's height is greater than the image's height */
+    background-attachment: fixed;
+    
+    /* This is what makes the background image rescale based
+      on the container's size */
+    background-size: cover;
+
+    /* Set a background color that will be displayed
+      while the background image is loading */
+    background-color:lightblue;
+
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 5vw;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .hello {
+    font-family: 'Bungee Shade', sans-serif;
+    font-size: 10vw;
+    border: solid;
+    border-radius: 25px;
+    background: pink;
+    grid-column:2/4;
+    grid-row-start:1;
+    width: 100%;
+    text-align:center;
+  }
+
+  a:link, a:visited {
+    border-radius: 25px;
+    padding : 2vw 2vw;
+    border: solid;
+    border-color: black;
+    background: pink;
+    color: black;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 5vw;
+    text-align:center;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  a:hover, a:active {
+  background-color: lightblue;
+  }
+
+  .github {
+    grid-column:2/3;
+    grid-row-start:2;
+  }
+
+  .resume {
+    grid-column:3/4;
+    grid-row-start:2;
+  }
+
+  .octo {
+    max-width: 75%;
+    height: auto;
+  }
 }
