@@ -1,5 +1,4 @@
 # My personal website
 
-## Link To Github
-
-## Link To my online resume
+# Links to images
+## https://commons.wikimedia.org/wiki/File:Robot_icon.svg
