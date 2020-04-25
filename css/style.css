@@ -21,20 +21,21 @@ body {
 
   display: grid;
   height: 100%;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 2fr 3fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto-fit 1fr 1fr;
+  grid-gap: 5vw;
   align-items: center;
   justify-items: center;
 }
 
 .hello {
   font-family: 'Bungee Shade', sans-serif;
-  font-size: 6vw;
+  font-size: 10vw;
   border: solid;
   border-radius: 25px;
   background: pink;
-  grid-column:3/5;
-  grid-row-start:2;
+  grid-column:2/4;
+  grid-row-start:1;
   width: 100%;
   text-align:center;
   margin-bottom:2vw;
@@ -64,12 +65,13 @@ a:hover, a:active {
 }
 
 .github {
-  grid-column:3;
-  grid-row-start:3;
+  grid-column:2/3;
+  grid-row-start:2;
 }
 
 .resume {
-  grid-column:4;
-  grid-row-start:3;
-  
+  grid-column:3/4;
+  grid-row-start:2;
+  width: 10px;
 }
+
