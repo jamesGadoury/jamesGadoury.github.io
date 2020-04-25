@@ -43,18 +43,17 @@ body {
 
 a:link, a:visited {
   border-radius: 25px;
+  padding : 2vw 2vw;
   border: solid;
   border-color: black;
   background: pink;
   color: black;
-  padding: 15px 32px;
   text-align: center;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
   text-decoration: none;
   font-family: 'Orbitron', sans-serif;
-  font-size: 2vw;
-  width:8vw;
+  font-size: 5vw;
   text-align:center;
   cursor: pointer;
   display: inline-block;
@@ -72,6 +71,4 @@ a:hover, a:active {
 .resume {
   grid-column:3/4;
   grid-row-start:2;
-  width: 10px;
 }
-
