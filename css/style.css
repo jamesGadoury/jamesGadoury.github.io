@@ -29,13 +29,13 @@ body {
 
 .hello {
   font-family: 'Bungee Shade', sans-serif;
-  font-size: 5vw;
+  font-size: 6vw;
   border: solid;
   border-radius: 25px;
   background: pink;
-  grid-column:2/6;
+  grid-column:3/5;
   grid-row-start:2;
-  width: 25vw;
+  width: 100%;
   text-align:center;
   margin-bottom:2vw;
 }
