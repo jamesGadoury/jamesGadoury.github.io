@@ -1,15 +1,75 @@
 html, body {
-  background-color:lightblue;
+  height: 100%;
   margin:0px;
   padding:0px;
 }
 
+body {
+  /* Location of the image */
+  background: url("../resources/Flaming_star_nebula.jpg") no-repeat center center;
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color:lightblue;
+
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 3fr;
+  align-items: center;
+  justify-items: center;
+}
+
 .hello {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 100px;
-  width: 30%;
-  padding-left:20px;
-  margin-left:20px;
+  font-family: 'Bungee Shade', sans-serif;
+  font-size: 5vw;
   border: solid;
+  border-radius: 25px;
   background: pink;
+  grid-column:2/6;
+  grid-row-start:2;
+  width: 25vw;
+  text-align:center;
+  margin-bottom:2vw;
+}
+
+a:link, a:visited {
+  border-radius: 25px;
+  border: solid;
+  border-color: black;
+  background: pink;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2vw;
+  width:8vw;
+  text-align:center;
+  cursor: pointer;
+  display: inline-block;
+}
+
+a:hover, a:active {
+ background-color: lightblue;
+}
+
+.github {
+  grid-column:3;
+  grid-row-start:3;
+}
+
+.resume {
+  grid-column:4;
+  grid-row-start:3;
+  
 }
