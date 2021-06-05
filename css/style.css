@@ -6,8 +6,7 @@ body, html {
 }
 
 .container {
-  /* The image used */
-  background-image: url("../resources/pexels-guillaume-meurice-2873671.jpg");
+  background-color: rgb(35, 117, 250);
 
   /* Full height */
   height: 100%;
