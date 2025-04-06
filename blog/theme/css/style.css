@@ -7,6 +7,10 @@ html, body {
   font-family: 'Exo 2', sans-serif;
   color: #e0e0e0;
   transform: translateZ(0); /* Optional for smoother scrolling */
+  overflow-x: hidden;
+  overscroll-behavior: none;
+  touch-action: manipulation;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Top Navigation Bar Styles - Updated */
