@@ -111,6 +111,14 @@ article h2 a:hover {
 
 .post-date {
   font-size: 0.9em;
+  font-weight: bold;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.authors {
+  font-size: 0.9em;
+  font-weight: bold;
   color: #ccc;
   margin-bottom: 1rem;
 }
