@@ -115,13 +115,17 @@ html {
 }
 
 #contact-section a {
-    color: inherit;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2em;
+    color: #eb3492;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-#contact-section:hover {
+#contact-section a:hover {
     background-color: rgba(235, 52, 146, 0.3);
+    color: #fff;
     transform: scale(1.02);
     box-shadow: 0 0 20px #eb3492;
 }
