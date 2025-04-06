@@ -5,7 +5,7 @@ html {
     margin: 0;
     padding: 0;
     font-size: 100%;
-    font-family: 'Righteous', sans-serif;
+    font-family: 'Exo 2', sans-serif;
 }
 
 .container {
@@ -59,8 +59,9 @@ html {
 }
 
 #hello-section {
-    font-family: 'Bungee', cursive;
+    font-family: 'Exo 2', sans-serif;
     font-size: 1.5em;
+    font-weight: bold;
     color: #fff;
     margin-top: 1rem;
     text-shadow: 0 0 10px #eb3492;
@@ -115,8 +116,9 @@ html {
 }
 
 #contact-section a {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Exo 2', sans-serif;
     font-size: 1.2em;
+    font-weight: bold;
     color: #eb3492;
     text-decoration: none;
     font-weight: bold;
@@ -138,8 +140,9 @@ html {
 }
 
 #blog-link a {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Exo 2', sans-serif;
     font-size: 1.2em;
+    font-weight: bold;
     color: #eb3492;
     text-decoration: none;
     border: 1px solid #eb3492;
