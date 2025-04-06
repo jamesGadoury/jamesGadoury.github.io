@@ -17,6 +17,7 @@ AUTHOR_FEED_RSS = None
 DEFAULT_PAGINATION = 10
 
 # TODO: find better theme
+# https://pelicanthemes.com/
 # can use git clone https://github.com/getpelican/pelican-themes.git
 # THEME_PATH = 'pelican-themes'
 # THEME = 'simple'
