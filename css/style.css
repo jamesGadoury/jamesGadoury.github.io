@@ -134,7 +134,7 @@ html {
 
 /* Updated Blog Link: Set as block with centered text and added vertical spacing */
 #blog-link {
-    margin: 2rem auto; /* Increased vertical spacing and centered */
+    margin: 1rem auto; /* Increased vertical spacing and centered */
     display: block;
     text-align: center;
 }
