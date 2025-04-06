@@ -1,118 +1,171 @@
+/* Base resets */
 body,
 html {
     height: 100%;
-    padding: 0px;
-    margin: 0px;
+    margin: 0;
+    padding: 0;
     font-size: 100%;
+    font-family: 'Righteous', sans-serif;
 }
 
+/* Animated cyberpunk gradient background */
 .container {
-    background-color: rgb(35, 117, 250);
-    /* Full height */
-    height: 100%;
-    /* Center and scale the image */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
+    background: linear-gradient(270deg, #0f0c29, #302b63, #eb3492, #2C5364);
+    background-size: 800% 800%;
+    animation: gradientAnimation 15s ease infinite;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    /* Make sure the image is not too big */
-    max-width: 100%;
-    max-height: 100%;
-    /* Make sure the image is not too small */
-    min-width: 100%;
-    min-height: 100%;
-    /* overflow-x: scroll;
-  white-space: nowrap; */
+    min-height: 100vh;
 }
 
+/* Keyframes for the animated gradient */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Profile card with subtle neon glow and fade-in */
 #profile-card {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    color: rgb(71, 71, 92);
+    background-color: rgba(20, 20, 20, 0.85);
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
 }
 
+/* Fade-in animation for profile card */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Profile picture with neon border and hover scale effect */
+#profile-pic {
+    margin-top: 1rem;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #eb3492;
+    transition: transform 0.3s ease;
+}
+
+#profile-pic:hover {
+    transform: scale(1.05);
+}
+
+/* Greeting section with shonen anime energy and neon text glow */
+#hello-section {
+    font-family: 'Bungee', cursive;
+    font-size: 1.5em;
+    color: #fff;
+    margin-top: 1rem;
+    text-shadow: 0 0 10px #eb3492;
+    animation: flicker 1.5s infinite alternate;
+}
+
+/* Flicker animation for text */
+@keyframes flicker {
+    0% {
+        opacity: 0.9;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
+}
+
+/* Subtext styling */
+.subtext {
+    font-size: 0.75em;
+    color: #ccc;
+}
+
+/* Contact section with neon button effect */
+#contact-section {
+    background-color: #eb3492;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#contact-section:hover {
+    background-color: #c1277c;
+}
+
+/* Social media section with smooth hover lift */
+#social-media-section {
+    margin-top: 1rem;
+}
+
+.social-media-img {
+    width: 40px;
+    height: 40px;
+    margin: 0 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-media-img:hover {
+    transform: translateY(-5px);
+}
+
+/* Blog link styled as a neon button */
+#blog-link {
+    margin-top: 1rem;
+}
+
+#blog-link a {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2em;
+    color: #eb3492;
+    text-decoration: none;
+    border: 2px solid #eb3492;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#blog-link a:hover {
+    background-color: #eb3492;
+    color: #fff;
+}
+
+/* Responsive adjustments for larger screens */
 @media (min-width: 600px) {
     #profile-card {
-        width: 40%;
-        height: 90%;
+        max-width: 40%;
     }
-}
 
-#profile-pic {
-    margin-top: 6rem;
-    height: auto;
-    width: 40%;
-    border-radius: 50%;
-    order: 0;
-}
-
-@media (min-width: 600px) {
     #profile-pic {
-        margin-top: 3rem;
+        margin-top: 2rem;
     }
-}
 
-#hello-section {
-    font-family: 'Bungee', sans-serif;
-    order: 1;
-    margin-top: 2rem;
-    border-bottom: 1px solid gray;
-    font-size: 1.35em;
-    line-height: 0.5em;
-    text-align: center;
-}
-
-@media (min-width: 600px) {
-    #hello-section {
-        margin-top: 1rem;
-    }
-}
-
-@media (min-width: 600px) {
     #hello-section {
         font-size: 1.75em;
     }
-}
-
-#about-section {
-    order: 2;
-    font-family: arial, sans-serif;
-    font-weight: bold;
-    width: 80%;
-    margin-top: 1rem;
-}
-
-#contact-section {
-    order: 3;
-    background-color: rgb(235, 52, 146);
-    color: white;
-    width: 80%;
-    text-align: center;
-    border-radius: 25px;
-    margin-top: 1rem;
-}
-
-#social-media-section {
-    order: 4;
-    margin-top: 1rem;
-    text-align: center;
-    width: 80%;
-}
-
-#social-media-img {
-    width: 20%;
-    height: auto;
-}
-
-/* New styling for blog link */
-#blog-link {
-    margin-top: 1rem;
-    text-align: center;
 }
