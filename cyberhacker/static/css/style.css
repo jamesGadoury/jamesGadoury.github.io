@@ -77,16 +77,30 @@ main {
   margin: 0 auto;
 }
 
+/* Article container */
 article {
   margin-bottom: 2rem;
-  background: rgba(20, 20, 20, 0.8);
-  padding: 1.5rem;
+  background: rgba(20, 20, 20, 0.9); /* Slightly more opaque for readability */
+  padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(235, 52, 146, 0.4);
+  box-shadow: 0 0 10px rgba(235, 52, 146, 0.3);
+  color: #e0e0e0;
+  font-size: 1.1em; /* Slightly larger for comfortable reading */
+  line-height: 1.6;  /* Increased line-height for easier reading */
 }
 
+/* Headings within articles */
+article h2, 
+article h3, 
+article h4 {
+  color: #ffffff;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Article title links */
 article h2 a {
-  font-size: 2em;
+  font-size: 1em;
   color: #ff66cc;
   text-decoration: none;
   text-shadow: 0 0 5px #ff66cc;
@@ -94,18 +108,52 @@ article h2 a {
 }
 
 article h2 a:hover {
-  color: #ffffff;
+  color: #ff66cc;
   text-shadow: 0 0 10px #ff66cc;
 }
 
+/* Post date styling */
 .post-date {
   font-size: 0.9em;
   color: #cccccc;
   margin-bottom: 1rem;
 }
 
+/* Article content paragraphs */
+article p {
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+/* Improve list spacing in articles */
+article ul, 
+article ol {
+  margin: 1rem 0 1rem 2rem;
+  line-height: 1.6;
+}
+
+/* Blockquote styling */
+article blockquote {
+  border-left: 4px solid #ff66cc;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  font-style: italic;
+  background: rgba(235, 52, 146, 0.1);
+}
+
+/* Ensure code blocks are readable */
+article pre,
+article code {
+  font-family: monospace;
+  background: rgba(235, 52, 146, 0.1);
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+/* Summary text style (if used) */
 .summary {
-  line-height: 1.5;
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 /* Pagination Styles */
