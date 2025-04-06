@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <article>
+    <h1>{{ article.title }}</h1>
+    <div class="content">
+      {{ article.content }}
+    </div>
+  </article>
+  <p class="post-date">{{ article.date.strftime('%b %d, %Y') }}</p>
+  <p class="authors">authored by
+    {% if article.authors %}
+    {% for author in article.authors %}
+        {{ author }}{% if not loop.last %}, {% endif %}
+    {% endfor %}
+    {% elif article.author %}
+    {{ article.author }}
+    {% else %}
+    No author specified.
+    {% endif %}
+  </p>
+{% endblock content %}
+

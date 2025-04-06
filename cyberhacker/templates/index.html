@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }}{% endblock %}
+
+{% block content %}
+  {% if articles or articles_page %}
+    {% if articles %}
+      {% set post_list = articles %}
+    {% else %}
+      {% set post_list = articles_page.object_list %}
+    {% endif %}
+
+    {% for article in post_list %}
+      <article>
+        <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+        <p class="post-date">{{ article.date.strftime('%b %d, %Y') }}</p>
+        <div class="summary">
+          {{ article.summary }}
+        </div>
+      </article>
+    {% endfor %}
+
+    {% if pagination %}
+      <div class="pagination">
+        {% if pagination.prev_page %}
+          <a href="{{ pagination.prev_page.url }}">Previous</a>
+        {% endif %}
+        {% if pagination.next_page %}
+          <a href="{{ pagination.next_page.url }}">Next</a>
+        {% endif %}
+      </div>
+    {% endif %}
+  {% else %}
+    <p>No articles found.</p>
+  {% endif %}
+{% endblock content %}
+

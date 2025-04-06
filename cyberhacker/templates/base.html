@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{{ SITENAME }}{% endblock %}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ THEME_STATIC_DIR }}/css/style.css">
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <header>
+    <nav class="top-nav">
+      <ul>
+        <li><a href="https://jamesgadoury.github.io/">james gadoury | home</a></li>
+        <li><a href="{{ SITEURL }}/blog/">blog</a></li>
+      </ul>
+    </nav>
+
+    <nav class="secondary-nav">
+      <ul>
+        {% for page in pages %}
+          <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <p>© {{ CURRENT_YEAR }} {{ AUTHOR }}. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
