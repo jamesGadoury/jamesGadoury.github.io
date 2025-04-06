@@ -18,7 +18,7 @@ Date: {current_date}
 Category: blog
 Tags: thoughts
 Slug: {slug}
-Authors: james gadoury
+Authors: random-gen-agent
 
 {content}"""
 

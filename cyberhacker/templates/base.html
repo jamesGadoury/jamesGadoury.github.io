@@ -10,8 +10,16 @@
 </head>
 <body>
   <header>
-    <h1>{{ SITENAME }}</h1>
-    <nav>
+    <!-- New Top Navigation Bar -->
+    <nav class="top-nav">
+      <ul>
+        <li><a href="https://jamesgadoury.github.io/">Home</a></li>
+        <li><a href="{{ SITEURL }}/blog/">Blog</a></li>
+      </ul>
+    </nav>
+
+    <!-- Additional Navigation (Pages) -->
+    <nav class="secondary-nav">
       <ul>
         {% for page in pages %}
           <li><a href="{{ page.url }}">{{ page.title }}</a></li>
@@ -24,6 +32,8 @@
     {% block content %}{% endblock %}
   </main>
 
+  <!-- Single horizontal rule above the copyright -->
+  <hr>
   <footer>
     <p>© {{ CURRENT_YEAR }} {{ AUTHOR }}. All rights reserved.</p>
   </footer>

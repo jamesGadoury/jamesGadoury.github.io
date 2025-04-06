@@ -11,13 +11,13 @@
     {% endif %}
 
     {% for article in post_list %}
-    <article>
+      <article>
         <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
         <p class="post-date">{{ article.date.strftime('%b %d, %Y') }}</p>
         <div class="summary">
-        {{ article.summary }}
+          {{ article.summary }}
         </div>
-    </article>
+      </article>
     {% endfor %}
 
     {% if pagination %}

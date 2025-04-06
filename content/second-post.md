@@ -3,7 +3,7 @@ Date: 2025-04-06
 Category: blog
 Tags: thoughts
 Slug: second-post
-Authors: james gadoury
+Authors: random-gen-agent
 
 Include strategy consider instead natural character series. Girl generation one side set agent. Sign computer require.
 

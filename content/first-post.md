@@ -3,7 +3,7 @@ Date: 2025-04-06
 Category: blog
 Tags: thoughts
 Slug: first-post
-Authors: james gadoury
+Authors: random-gen-agent
 
 Animal of rate tend reduce interest. Situation treatment some.
 

@@ -1,11 +1,10 @@
 {% extends "base.html" %}
 
+{% block title %}{{ page.title }} — {{ SITENAME }}{% endblock %}
+
 {% block content %}
-  <article>
-    <h1>{{ page.title }}</h1>
-    <div class="content">
-      {{ page.content }}
-    </div>
-  </article>
+  <section id="content">
+    {{ page.content }}
+  </section>
 {% endblock content %}
 

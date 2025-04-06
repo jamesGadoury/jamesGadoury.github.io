@@ -1,4 +1,3 @@
-/* Reset and Base Styles */
 body, html {
   margin: 0;
   padding: 0;
@@ -7,7 +6,6 @@ body, html {
   color: #fff;
 }
 
-/* Header */
 header {
   text-align: center;
   padding: 1rem;
@@ -18,6 +16,37 @@ header h1 {
   margin: 0;
   font-size: 2.5em;
   text-shadow: 0 0 10px #eb3492;
+}
+
+header h1 a {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 2.5em;
+    color: #eb3492;
+    text-decoration: none;
+    text-shadow: 0 0 10px #eb3492;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+header h1 a:hover {
+    color: #fff;
+    text-shadow: 0 0 20px #eb3492;
+}
+
+.back-home a {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.2em;
+    color: #eb3492;
+    text-decoration: none;
+    border: 2px solid #eb3492;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.back-home a:hover {
+    background-color: #eb3492;
+    color: #fff;
+    transform: scale(1.05);
 }
 
 nav ul {
@@ -42,7 +71,6 @@ nav ul li a:hover {
   color: #fff;
 }
 
-/* Main Content */
 main {
   padding: 2rem;
   max-width: 800px;
@@ -87,13 +115,11 @@ article h2 a:hover {
   margin-bottom: 1rem;
 }
 
-/* Article summary styling */
 .summary {
   font-size: 1em;
   line-height: 1.5;
 }
 
-/* Pagination */
 .pagination {
   text-align: center;
 }
@@ -109,12 +135,67 @@ article h2 a:hover {
   color: #fff;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
   border-top: 1px solid #eb3492;
   font-size: 0.8em;
   color: #ccc;
+}
+
+/* Top Navigation Bar Styles */
+.top-nav {
+  text-align: center;
+  padding: 0.5rem 0;
+  background-color: #141414; /* Matches the dark background */
+}
+
+.top-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.top-nav ul li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.top-nav ul li a {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1.2em;
+  color: #eb3492;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  text-shadow: 0 0 5px #eb3492;
+}
+
+.top-nav ul li a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #eb3492;
+}
+
+/* Optional: Adjust secondary navigation styling if needed */
+.secondary-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.secondary-nav ul li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.secondary-nav ul li a {
+  font-family: 'Exo 2', sans-serif;
+  color: #eb3492;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.secondary-nav ul li a:hover {
+  color: #fff;
 }
 
