@@ -127,7 +127,8 @@ html {
 }
 
 #blog-link {
-    margin-top: 1rem;
+    margin: 2rem auto;   /* Increased vertical spacing */
+    display: inline-block;
 }
 
 #blog-link a {
@@ -135,15 +136,19 @@ html {
     font-size: 1.2em;
     color: #eb3492;
     text-decoration: none;
-    border: 2px solid #eb3492;
-    padding: 0.5rem 1rem;
+    border: 1px solid #eb3492;
+    padding: 1rem 2rem;   /* Increased padding for a larger clickable area */
     border-radius: 20px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: rgba(235, 52, 146, 0.15);
+    box-shadow: 0 0 10px #eb3492;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 
 #blog-link a:hover {
-    background-color: #eb3492;
+    background-color: rgba(235, 52, 146, 0.3);
     color: #fff;
+    transform: scale(1.02);
+    box-shadow: 0 0 20px #eb3492;
 }
 
 @media (min-width: 600px) {
