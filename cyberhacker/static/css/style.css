@@ -13,6 +13,13 @@ html, body {
   -webkit-overflow-scrolling: touch;
 }
 
+@media (max-width: 768px) {
+  html, body {
+    background-attachment: scroll !important;
+    overflow-x: hidden;
+  }
+}
+
 /* Top Navigation Bar Styles - Updated */
 .top-nav {
   text-align: center;

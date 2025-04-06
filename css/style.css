@@ -20,6 +20,13 @@ html {
     min-height: 100vh;
 }
 
+@media (max-width: 768px) {
+    .container {
+        background-attachment: scroll !important;
+    }
+}
+
+
 #profile-card {
     background-color: rgba(20, 20, 20, 0.85);
     padding: 2rem;
