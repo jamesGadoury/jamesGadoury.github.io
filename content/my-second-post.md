@@ -1,8 +1,8 @@
-Title: first post
+Title: second post
 Date: 2025-04-06
 Category: blog
 Tags: thoughts
-Slug: first-post
+Slug: second-post
 Authors: james gadoury
 
-this is my first post.
+this is my second post.

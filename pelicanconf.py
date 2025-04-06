@@ -7,7 +7,7 @@ PATH = "content"
 TIMEZONE = "America/New_York"
 DEFAULT_LANG = "en"
 
-# TODO: do i want this?
+# TODO: enable feeds?
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
@@ -16,9 +16,12 @@ AUTHOR_FEED_RSS = None
 
 DEFAULT_PAGINATION = 10
 
-# TODO: find better theme
-# https://pelicanthemes.com/
-# can use git clone https://github.com/getpelican/pelican-themes.git
-# THEME_PATH = 'pelican-themes'
-# THEME = 'simple'
-THEME = "notmyidea"
+# Point to your custom theme folder
+THEME = "cyberhacker"
+
+# Ensure static files from your theme are processed correctly
+STATIC_PATHS = ['images', 'extra']
+
+# (Optional) If you want to include extra static assets from your theme,
+# make sure they’re copied to the output.
+
