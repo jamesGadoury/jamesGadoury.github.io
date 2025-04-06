@@ -5,14 +5,16 @@ Tags: thoughts
 Slug: first-post
 Authors: james gadoury 
 
-Today I'm starting a blog.
+I'm James.
 
-I work at amazon robotics, generally as a dev and roboticist.
+I work at amazon robotics, generally as a dev and roboticist developing robotic manipulation workcells.
 My current focus is on robotic perception & task/action planning.
-I also do a fair amount of lower level (in terms of abstraction) dev for work;
+I also do a fair amount of lower level (in terms of abstraction) dev for work
 including configuring networks, writing services that interact with hardware, and other deeply frustrating things.
 
-I plan on writing about things I'm interested.
+Today I'm starting a blog.
+
+I plan on writing about things I'm interested in.
 I aim to keep the posts / articles at roughly the length of my attention span.
 With the rise of short form content (tiktok and youtube shorts), I suspect that is for the best. 
 
@@ -26,4 +28,5 @@ With the rise of short form content (tiktok and youtube shorts), I suspect that 
 - general autonomy, agent dev, etc
 
 I will try to write roughly once a week.
+
 It will be concerning if I don't have something useful to share at least once a week, as it indicates I'm not working on the right stuff on my free time. 
