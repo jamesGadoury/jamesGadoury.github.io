@@ -184,13 +184,12 @@ article code {
   color: #ffffff;
 }
 
-/* Footer Styles */
 footer {
+  background-color: #141414; /* match the body background */
+  color: #e0e0e0;
   text-align: center;
   padding: 1rem;
-  font-size: 0.8em;
-  color: #cccccc;
-  background: rgba(18, 18, 18, 0.95);
+  margin-top: 2rem;
 }
 
 /* Remove any borders or horizontal rules that may appear */
