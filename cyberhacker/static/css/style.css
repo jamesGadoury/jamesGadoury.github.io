@@ -1,3 +1,4 @@
+/* Reset and Base Styles */
 body, html {
   margin: 0;
   padding: 0;
@@ -6,71 +7,61 @@ body, html {
   color: #fff;
 }
 
-header {
+/* Top Navigation Bar Styles */
+.top-nav {
   text-align: center;
-  padding: 1rem;
-  border-bottom: 1px solid #eb3492;
+  padding: 0.5rem 0;
+  background-color: #141414;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
-  text-shadow: 0 0 10px #eb3492;
-}
-
-header h1 a {
-    font-family: 'Exo 2', sans-serif;
-    font-size: 2.5em;
-    color: #eb3492;
-    text-decoration: none;
-    text-shadow: 0 0 10px #eb3492;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-header h1 a:hover {
-    color: #fff;
-    text-shadow: 0 0 20px #eb3492;
-}
-
-.back-home a {
-    font-family: 'Exo 2', sans-serif;
-    font-size: 1.2em;
-    color: #eb3492;
-    text-decoration: none;
-    border: 2px solid #eb3492;
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-}
-
-.back-home a:hover {
-    background-color: #eb3492;
-    color: #fff;
-    transform: scale(1.05);
-}
-
-nav ul {
+.top-nav ul {
   list-style: none;
+  margin: 0;
   padding: 0;
-  margin: 1rem 0;
 }
 
-nav ul li {
+.top-nav ul li {
   display: inline-block;
   margin: 0 1rem;
 }
 
-nav ul li a {
+.top-nav ul li a {
+  font-size: 1.2em;
   color: #eb3492;
   text-decoration: none;
-  font-size: 1.2em;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  text-shadow: 0 0 5px #eb3492;
+}
+
+.top-nav ul li a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #eb3492;
+}
+
+/* Secondary Navigation Styles */
+.secondary-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.secondary-nav ul li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.secondary-nav ul li a {
+  color: #eb3492;
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+.secondary-nav ul li a:hover {
   color: #fff;
 }
 
+/* Main Content Styles */
 main {
   padding: 2rem;
   max-width: 800px;
@@ -78,56 +69,33 @@ main {
 }
 
 article {
-  margin-bottom: 3rem;
-  border-bottom: 1px solid #eb3492;
-  padding-bottom: 1rem;
-}
-
-article h1,
-article h2,
-article h3 {
-  color: #eb3492;
-  text-shadow: 0 0 5px #eb3492;
+  margin-bottom: 2rem;
 }
 
 article h2 a {
-    display: inline-block;
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 500;
-    font-size: 2em;
-    color: #eb3492;
-    text-decoration: none;
-    text-shadow: 0 0 5px #eb3492;
-    border-bottom: 2px solid transparent;
-    transition: color 0.3s ease, border-bottom 0.3s ease, text-shadow 0.3s ease;
+  font-size: 2em;
+  color: #eb3492;
+  text-decoration: none;
+  text-shadow: 0 0 5px #eb3492;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 article h2 a:hover {
-    color: #fff;
-    text-shadow: 0 0 10px #eb3492;
-    border-bottom: 2px solid #eb3492;
+  color: #fff;
+  text-shadow: 0 0 10px #eb3492;
 }
-
 
 .post-date {
   font-size: 0.9em;
-  font-weight: bold;
-  color: #ccc;
-  margin-bottom: 1rem;
-}
-
-.authors {
-  font-size: 0.9em;
-  font-weight: bold;
   color: #ccc;
   margin-bottom: 1rem;
 }
 
 .summary {
-  font-size: 1em;
   line-height: 1.5;
 }
 
+/* Pagination Styles */
 .pagination {
   text-align: center;
 }
@@ -143,67 +111,17 @@ article h2 a:hover {
   color: #fff;
 }
 
+/* Footer Styles */
 footer {
   text-align: center;
   padding: 1rem;
-  border-top: 1px solid #eb3492;
   font-size: 0.8em;
   color: #ccc;
+  background-color: #141414;
 }
 
-/* Top Navigation Bar Styles */
-.top-nav {
-  text-align: center;
-  padding: 0.5rem 0;
-  background-color: #141414; /* Matches the dark background */
-}
-
-.top-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.top-nav ul li {
-  display: inline-block;
-  margin: 0 1rem;
-}
-
-.top-nav ul li a {
-  font-family: 'Exo 2', sans-serif;
-  font-size: 1.2em;
-  color: #eb3492;
-  text-decoration: none;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-  text-shadow: 0 0 5px #eb3492;
-}
-
-.top-nav ul li a:hover {
-  color: #fff;
-  text-shadow: 0 0 10px #eb3492;
-}
-
-/* Optional: Adjust secondary navigation styling if needed */
-.secondary-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-.secondary-nav ul li {
-  display: inline-block;
-  margin: 0 1rem;
-}
-
-.secondary-nav ul li a {
-  font-family: 'Exo 2', sans-serif;
-  color: #eb3492;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.secondary-nav ul li a:hover {
-  color: #fff;
+/* Remove any default borders or HR effects */
+hr {
+  display: none;
 }
 
