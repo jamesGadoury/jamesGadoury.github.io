@@ -25,9 +25,15 @@ html {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
     max-width: 400px;
-    width: 90%;
+    width: 100%;
     text-align: center;
     animation: fadeIn 1s ease-out;
+}
+
+@media (min-width: 400px) {
+    #profile-card {
+        width: 400px;
+    }
 }
 
 /* Fade-in animation for profile card */
@@ -108,10 +114,11 @@ html {
 }
 
 .social-media-img {
-    width: 40px;
-    height: 40px;
+    width: 60px;       /* Increased from 40px */
+    height: 60px;      /* Increased from 40px */
     margin: 0 0.5rem;
     transition: transform 0.3s ease;
+    border-radius: 0;  /* Removes any rounding to appear blocky */
 }
 
 .social-media-img:hover {
