@@ -1,17 +1,19 @@
-/* Reset and Base Styles */
-body, html {
+html, body {
   margin: 0;
   padding: 0;
+  background-color: #141414; /* Fallback dark color */
+  background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+  background-attachment: fixed;
   font-family: 'Exo 2', sans-serif;
-  background-color: #141414;
-  color: #fff;
+  color: #e0e0e0;
+  transform: translateZ(0); /* Optional for smoother scrolling */
 }
 
-/* Top Navigation Bar Styles */
 .top-nav {
   text-align: center;
-  padding: 0.5rem 0;
-  background-color: #141414;
+  padding: 0.75rem 0;
+  background: rgba(18, 18, 18, 0.95);
+  box-shadow: none;
 }
 
 .top-nav ul {
@@ -27,18 +29,23 @@ body, html {
 
 .top-nav ul li a {
   font-size: 1.2em;
-  color: #eb3492;
+  color: #ff66cc;
   text-decoration: none;
   transition: color 0.3s ease, text-shadow 0.3s ease;
-  text-shadow: 0 0 5px #eb3492;
+  text-shadow: 0 0 5px #ff66cc;
 }
 
 .top-nav ul li a:hover {
-  color: #fff;
-  text-shadow: 0 0 10px #eb3492;
+  color: #ffffff;
+  text-shadow: 0 0 10px #ff66cc;
 }
 
 /* Secondary Navigation Styles */
+.secondary-nav {
+  background: rgba(18, 18, 18, 0.8);
+  padding: 0.5rem 0;
+}
+
 .secondary-nav ul {
   list-style: none;
   margin: 0;
@@ -52,13 +59,13 @@ body, html {
 }
 
 .secondary-nav ul li a {
-  color: #eb3492;
+  color: #ff66cc;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .secondary-nav ul li a:hover {
-  color: #fff;
+  color: #ffffff;
 }
 
 /* Main Content Styles */
@@ -70,24 +77,28 @@ main {
 
 article {
   margin-bottom: 2rem;
+  background: rgba(20, 20, 20, 0.8);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(235, 52, 146, 0.4);
 }
 
 article h2 a {
   font-size: 2em;
-  color: #eb3492;
+  color: #ff66cc;
   text-decoration: none;
-  text-shadow: 0 0 5px #eb3492;
+  text-shadow: 0 0 5px #ff66cc;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 article h2 a:hover {
-  color: #fff;
-  text-shadow: 0 0 10px #eb3492;
+  color: #ffffff;
+  text-shadow: 0 0 10px #ff66cc;
 }
 
 .post-date {
   font-size: 0.9em;
-  color: #ccc;
+  color: #cccccc;
   margin-bottom: 1rem;
 }
 
@@ -98,17 +109,18 @@ article h2 a:hover {
 /* Pagination Styles */
 .pagination {
   text-align: center;
+  margin-top: 2rem;
 }
 
 .pagination a {
-  color: #eb3492;
+  color: #ff66cc;
   text-decoration: none;
   margin: 0 1rem;
   transition: color 0.3s ease;
 }
 
 .pagination a:hover {
-  color: #fff;
+  color: #ffffff;
 }
 
 /* Footer Styles */
@@ -116,11 +128,11 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.8em;
-  color: #ccc;
-  background-color: #141414;
+  color: #cccccc;
+  background: rgba(18, 18, 18, 0.95);
 }
 
-/* Remove any default borders or HR effects */
+/* Remove any borders or horizontal rules that may appear */
 hr {
   display: none;
 }
