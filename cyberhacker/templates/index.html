@@ -12,7 +12,7 @@
 
     {% for article in post_list %}
       <article>
-        <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+        <h2><a href="{{ SITEURL }}/blog/{{ article.url }}">{{ article.title }}</a></h2>
         <p class="post-date">{{ article.date.strftime('%b %d, %Y') }}</p>
         <div class="summary">
           {{ article.summary }}
