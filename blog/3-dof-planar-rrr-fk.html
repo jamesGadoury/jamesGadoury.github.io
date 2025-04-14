@@ -27,45 +27,27 @@
     <h1>fk for a 3 dof planar robot</h1>
     <div class="content">
       <p>This page displays an interactive 3-DOF planar robot manipulator. Use the sliders below the canvas to adjust the joint angles (in degrees) and link lengths (in pixels). The robot will update dynamically based on your input.</p>
-<canvas id="robotCanvas" width="600" height="600" style="border:1px solid #ccc; background-color:#f9f9f9;"></canvas>
+<style>
+  .robot-container { display: flex; align-items: flex-start; margin: 0; padding: 0; }
+  .controls { width: 180px; padding: 5px; font-size: 0.9em; line-height: 1.2em; }
+  .controls div { margin-bottom: 6px; }
+  .canvas-container { flex-grow: 1; display: flex; justify-content: center; padding: 5px; }
+  input[type="number"] { width: 60px; font-size: 0.9em; }
+</style>
 
-<!-- Controls for joint angles -->
-<div class="control-container">
-  <h2>Joint Angles (Degrees)</h2>
-  <div>
-    <label for="q1">q1:</label>
-    <input type="range" id="q1" class="slider" min="-180" max="180" value="0">
-    <span id="q1Val">0°</span>
+<div class="robot-container">
+  <div class="controls">
+    <div><strong>Joint Angles (°)</strong></div>
+    <div>q1: <input type="number" id="q1" value="0" min="-180" max="180"></div>
+    <div>q2: <input type="number" id="q2" value="0" min="-180" max="180"></div>
+    <div>q3: <input type="number" id="q3" value="0" min="-180" max="180"></div>
+    <div><strong>Link Lengths (px)</strong></div>
+    <div>l1: <input type="number" id="l1" value="100" min="10" max="200"></div>
+    <div>l2: <input type="number" id="l2" value="100" min="10" max="200"></div>
+    <div>l3: <input type="number" id="l3" value="100" min="10" max="200"></div>
   </div>
-  <div>
-    <label for="q2">q2:</label>
-    <input type="range" id="q2" class="slider" min="-180" max="180" value="0">
-    <span id="q2Val">0°</span>
-  </div>
-  <div>
-    <label for="q3">q3:</label>
-    <input type="range" id="q3" class="slider" min="-180" max="180" value="0">
-    <span id="q3Val">0°</span>
-  </div>
-</div>
-
-<!-- Controls for link lengths -->
-<div class="control-container">
-  <h2>Link Lengths (Pixels)</h2>
-  <div>
-    <label for="l1">l1:</label>
-    <input type="range" id="l1" class="slider" min="10" max="200" value="100">
-    <span id="l1Val">100</span>
-  </div>
-  <div>
-    <label for="l2">l2:</label>
-    <input type="range" id="l2" class="slider" min="10" max="200" value="100">
-    <span id="l2Val">100</span>
-  </div>
-  <div>
-    <label for="l3">l3:</label>
-    <input type="range" id="l3" class="slider" min="10" max="200" value="100">
-    <span id="l3Val">100</span>
+  <div class="canvas-container">
+    <canvas id="robotCanvas" width="600" height="600" style="border:1px solid #ccc; background:#f9f9f9;"></canvas>
   </div>
 </div>
 

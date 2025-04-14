@@ -1,101 +1,73 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Retrieve the canvas and its drawing context
   const canvas = document.getElementById('robotCanvas');
   const ctx = canvas.getContext('2d');
+  // Get references to the number input fields only.
+  const q1 = document.getElementById('q1'),
+        q2 = document.getElementById('q2'),
+        q3 = document.getElementById('q3'),
+        l1 = document.getElementById('l1'),
+        l2 = document.getElementById('l2'),
+        l3 = document.getElementById('l3');
 
-  // Retrieve sliders and display spans for angles and lengths
-  const q1Slider = document.getElementById('q1'),
-        q2Slider = document.getElementById('q2'),
-        q3Slider = document.getElementById('q3'),
-        l1Slider = document.getElementById('l1'),
-        l2Slider = document.getElementById('l2'),
-        l3Slider = document.getElementById('l3');
-
-  const q1Val = document.getElementById('q1Val'),
-        q2Val = document.getElementById('q2Val'),
-        q3Val = document.getElementById('q3Val'),
-        l1Val = document.getElementById('l1Val'),
-        l2Val = document.getElementById('l2Val'),
-        l3Val = document.getElementById('l3Val');
-
-  // Function to draw the robot on the canvas
+  // Function to draw the 3-DOF robot
   function drawRobot() {
     // Clear the canvas for redrawing
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Parse slider values and convert angles from degrees to radians
-    const q1 = parseFloat(q1Slider.value) * Math.PI / 180;
-    const q2 = parseFloat(q2Slider.value) * Math.PI / 180;
-    const q3 = parseFloat(q3Slider.value) * Math.PI / 180;
-
-    const l1 = parseFloat(l1Slider.value);
-    const l2 = parseFloat(l2Slider.value);
-    const l3 = parseFloat(l3Slider.value);
-
-    // Update the displayed slider values
-    q1Val.textContent = q1Slider.value + "°";
-    q2Val.textContent = q2Slider.value + "°";
-    q3Val.textContent = q3Slider.value + "°";
-    l1Val.textContent = l1Slider.value;
-    l2Val.textContent = l2Slider.value;
-    l3Val.textContent = l3Slider.value;
-
-    // Define the origin at the center of the canvas
-    const originX = canvas.width / 2;
-    const originY = canvas.height / 2;
-
-    // Set initial position and angle (starting from the base)
-    let x = originX;
-    let y = originY;
-    let currentAngle = 0;
-
-    // Set styling for drawing the robot arms
+    // Parse input values; convert joint angles from degrees to radians.
+    const angle1 = parseFloat(q1.value) * Math.PI / 180,
+          angle2 = parseFloat(q2.value) * Math.PI / 180,
+          angle3 = parseFloat(q3.value) * Math.PI / 180,
+          len1   = parseFloat(l1.value),
+          len2   = parseFloat(l2.value),
+          len3   = parseFloat(l3.value);
+    
+    // Center of the canvas
+    const originX = canvas.width / 2,
+          originY = canvas.height / 2;
+    let x = originX, 
+        y = originY, 
+        currentAngle = 0;
+    
     ctx.lineWidth = 4;
     ctx.strokeStyle = '#007acc';
     ctx.beginPath();
     ctx.moveTo(x, y);
 
-    // Draw first link: update angle by q1 then compute new position
-    currentAngle += q1;
-    let x1 = x + l1 * Math.cos(currentAngle);
-    let y1 = y + l1 * Math.sin(currentAngle);
+    // Compute first link end-point
+    currentAngle += angle1;
+    const x1 = x + len1 * Math.cos(currentAngle),
+          y1 = y + len1 * Math.sin(currentAngle);
     ctx.lineTo(x1, y1);
 
-    // Draw second link: update angle by q2 then compute new position
-    currentAngle += q2;
-    let x2 = x1 + l2 * Math.cos(currentAngle);
-    let y2 = y1 + l2 * Math.sin(currentAngle);
+    // Compute second link end-point
+    currentAngle += angle2;
+    const x2 = x1 + len2 * Math.cos(currentAngle),
+          y2 = y1 + len2 * Math.sin(currentAngle);
     ctx.lineTo(x2, y2);
 
-    // Draw third link: update angle by q3 then compute new position
-    currentAngle += q3;
-    let x3 = x2 + l3 * Math.cos(currentAngle);
-    let y3 = y2 + l3 * Math.sin(currentAngle);
+    // Compute third link end-point
+    currentAngle += angle3;
+    const x3 = x2 + len3 * Math.cos(currentAngle),
+          y3 = y2 + len3 * Math.sin(currentAngle);
     ctx.lineTo(x3, y3);
-
     ctx.stroke();
 
-    // Utility to draw joints as circles at given (cx, cy)
-    function drawJoint(cx, cy) {
+    // Draw joints as small red circles
+    [[originX, originY], [x1, y1], [x2, y2], [x3, y3]].forEach(function(point) {
       ctx.beginPath();
-      ctx.arc(cx, cy, 5, 0, 2 * Math.PI);
+      ctx.arc(point[0], point[1], 5, 0, 2 * Math.PI);
       ctx.fillStyle = 'red';
       ctx.fill();
-    }
-
-    // Draw joints at the base and at the tip of each link
-    drawJoint(originX, originY);
-    drawJoint(x1, y1);
-    drawJoint(x2, y2);
-    drawJoint(x3, y3);
+    });
   }
-
-  // Add event listeners to update the robot drawing whenever a slider is adjusted
-  [q1Slider, q2Slider, q3Slider, l1Slider, l2Slider, l3Slider].forEach(slider => {
-    slider.addEventListener('input', drawRobot);
+  
+  // Update the robot drawing any time an input value changes.
+  [q1, q2, q3, l1, l2, l3].forEach(field => {
+    field.addEventListener('input', drawRobot);
   });
 
-  // Initial drawing of the robot
+  // Initial drawing
   drawRobot();
 });
 
