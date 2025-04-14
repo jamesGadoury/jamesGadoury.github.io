@@ -28,10 +28,25 @@
     <div class="content">
       <p>This page displays an interactive 3-DOF planar robot manipulator. Use the sliders below the canvas to adjust the joint angles (in degrees) and link lengths (in pixels). The robot will update dynamically based on your input.</p>
 <style>
-  .robot-container { display: flex; align-items: flex-start; margin: 0; padding: 0; }
-  .controls { width: 180px; padding: 5px; font-size: 0.9em; line-height: 1.2em; }
+  .robot-container {
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+  }
+  .controls {
+    width: 180px;
+    padding: 5px;
+    font-size: 0.9em;
+    line-height: 1.2em;
+  }
   .controls div { margin-bottom: 6px; }
-  .canvas-container { flex-grow: 1; display: flex; justify-content: center; padding: 5px; }
+  .canvas-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+  }
   input[type="number"] { width: 60px; font-size: 0.9em; }
 </style>
 
@@ -47,7 +62,8 @@
     <div>l3: <input type="number" id="l3" value="100" min="10" max="200"></div>
   </div>
   <div class="canvas-container">
-    <canvas id="robotCanvas" width="600" height="600" style="border:1px solid #ccc; background:#f9f9f9;"></canvas>
+    <!-- Smaller canvas (400 x 400) -->
+    <canvas id="robotCanvas" width="400" height="400" style="border:1px solid #ccc; background:#f9f9f9;"></canvas>
   </div>
 </div>
 
