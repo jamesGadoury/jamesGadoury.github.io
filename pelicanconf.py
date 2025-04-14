@@ -20,8 +20,7 @@ DEFAULT_PAGINATION = 10
 THEME = "cyberhacker"
 
 # Ensure static files from your theme are processed correctly
-STATIC_PATHS = ['images', 'extra']
+STATIC_PATHS = ["images", "extra", "js"]
 
 # (Optional) If you want to include extra static assets from your theme,
 # make sure they’re copied to the output.
-

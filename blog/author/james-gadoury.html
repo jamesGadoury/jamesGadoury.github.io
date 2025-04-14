@@ -25,6 +25,42 @@
   <main>
 
       <article>
+        <h2><a href="https://jamesgadoury.github.io/blog/3-dof-planar-rrr-fk.html">fk for a 3 dof planar robot</a></h2>
+        <p class="post-date">Apr 13, 2025</p>
+        <div class="summary">
+          <p>This page displays an interactive 3-DOF planar robot manipulator. Use the sliders below the canvas to adjust the joint angles (in degrees) and link lengths (in pixels). The robot will update dynamically based on your input.</p>
+<canvas id="robotCanvas" width="600" height="600" style="border:1px solid #ccc; background-color:#f9f9f9;"></canvas>
+
+<!-- Controls for joint angles -->
+<div class="control-container">
+  <h2>Joint Angles (Degrees)</h2>
+  <div>
+    <label for="q1">q1:</label>
+    <input type="range" id="q1" class="slider" min="-180" max="180" value="0">
+    <span id="q1Val">0°</span>
+  </div>
+  <div>
+    <label for="q2">q2:</label>
+    <input type="range" id="q2" class="slider" min="-180" max="180" value="0">
+    <span id="q2Val">0°</span>
+  </div>
+  <div>
+    <label for="q3">q3:</label>
+    <input type="range" id="q3" class="slider" min="-180" max="180" value="0">
+    <span id="q3Val">0°</span>
+  </div>
+</div>
+
+<!-- Controls for link lengths -->
+<div class="control-container">
+  <h2>Link Lengths (Pixels)</h2>
+  <div>
+    <label for="l1">l1:</label>
+    <input type="range" id="l1" class="slider" min="10" max="200" value="100">
+    <span id="l1Val">100 …</span></div></div>
+        </div>
+      </article>
+      <article>
         <h2><a href="https://jamesgadoury.github.io/blog/first-post.html">first post</a></h2>
         <p class="post-date">Apr 06, 2025</p>
         <div class="summary">
