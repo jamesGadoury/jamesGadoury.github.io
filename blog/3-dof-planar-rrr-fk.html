@@ -26,28 +26,35 @@
   <article>
     <h1>fk for a 3 dof planar robot</h1>
     <div class="content">
-      <p>This page displays an interactive 3-DOF planar robot manipulator. Use the sliders below the canvas to adjust the joint angles (in degrees) and link lengths (in pixels). The robot will update dynamically based on your input.</p>
+      <p>Enter the joint angles (in °) and link lengths (in px) in the fields on the left.<br>
+Link lengths are constrained from 45 to 150 px. The drawing will automatically scale so that<br>
+the entire robot (its task space) always fits within the canvas.</p>
 <style>
-  .robot-container {
-    display: flex;
-    align-items: flex-start;
-    margin: 0;
-    padding: 0;
+  .robot-container { 
+    display: flex; 
+    align-items: flex-start; 
+    margin: 0; 
+    padding: 0; 
   }
-  .controls {
-    width: 180px;
-    padding: 5px;
-    font-size: 0.9em;
-    line-height: 1.2em;
+  .controls { 
+    width: 180px; 
+    padding: 5px; 
+    font-size: 0.9em; 
+    line-height: 1.2em; 
   }
-  .controls div { margin-bottom: 6px; }
-  .canvas-container {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    padding: 5px;
+  .controls div { 
+    margin-bottom: 6px; 
   }
-  input[type="number"] { width: 60px; font-size: 0.9em; }
+  .canvas-container { 
+    flex-grow: 1; 
+    display: flex; 
+    justify-content: center; 
+    padding: 5px; 
+  }
+  input[type="number"] { 
+    width: 60px; 
+    font-size: 0.9em; 
+  }
 </style>
 
 <div class="robot-container">
@@ -57,16 +64,17 @@
     <div>q2: <input type="number" id="q2" value="0" min="-180" max="180"></div>
     <div>q3: <input type="number" id="q3" value="0" min="-180" max="180"></div>
     <div><strong>Link Lengths (px)</strong></div>
-    <div>l1: <input type="number" id="l1" value="100" min="10" max="200"></div>
-    <div>l2: <input type="number" id="l2" value="100" min="10" max="200"></div>
-    <div>l3: <input type="number" id="l3" value="100" min="10" max="200"></div>
+    <div>l1: <input type="number" id="l1" value="100" min="45" max="150"></div>
+    <div>l2: <input type="number" id="l2" value="100" min="45" max="150"></div>
+    <div>l3: <input type="number" id="l3" value="100" min="45" max="150"></div>
   </div>
   <div class="canvas-container">
-    <!-- Smaller canvas (400 x 400) -->
+    <!-- Canvas size is fixed (e.g., 400×400) -->
     <canvas id="robotCanvas" width="400" height="400" style="border:1px solid #ccc; background:#f9f9f9;"></canvas>
   </div>
 </div>
 
+<!-- Reference to the external JavaScript file -->
 <script type="text/javascript" src="./js/planar_rrr.js"></script>
     </div>
   </article>
