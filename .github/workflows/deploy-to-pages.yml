@@ -1,4 +1,4 @@
-name: Build and Deploy to GitHub Pages
+name: Build and Deploy to GitHub Pages (via /docs)
 
 on:
   push:
@@ -6,12 +6,11 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -19,28 +18,17 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: "3.11"
 
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Generate static site in root
+      - name: Regenerate static site in /docs
         run: python generate.py
 
-      # Optionally, clean previous static files before building
-      # - name: Clean old static files
-      #   run: |
-      #     rm -rf <static_file_patterns_if_needed>
-
-      - name: Commit and push changes
+      - name: Auto commit updated site
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "[bot] Rebuild GitHub Pages"
+          commit_message: "[bot] regenerate GitHub Pages content"
           branch: main
-          file_pattern: |
-            *.html
-            *.css
-            *.js
-            assets/
-            images/
-            # Add patterns for all files/folders your static site needs
+          file_pattern: docs/*
