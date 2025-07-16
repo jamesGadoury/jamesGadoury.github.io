@@ -49,7 +49,7 @@ if __name__ == "__main__":
     cli.add_argument("--posts-dir", type=Path, default=Path("./posts"))
     cli.add_argument("--templates-dir", type=Path, default=Path("./templates"))
     cli.add_argument("--static-dir", type=Path, default=Path("./static"))
-    cli.add_argument("--output-dir", type=Path, default=Path("./dist"))
+    cli.add_argument("--output-dir", type=Path, default=Path("./"))
 
     args = cli.parse_args()
 
