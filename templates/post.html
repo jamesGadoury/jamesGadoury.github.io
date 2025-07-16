@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block body %}
+<article class="post">
+    <h1>{{ post.meta.title }}</h1>
+    <time datetime="{{ post.meta.date }}">{{ post.meta.date }}</time>
+    <div class="content">
+        {{ post.content|safe }}
+    </div>
+</article>
+{% endblock %}

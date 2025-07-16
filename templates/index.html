@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body %}
+<section class="posts-grid">
+    {% for p in posts %}
+    <article class="post-teaser">
+        <h2><a href="{{ p.slug }}.html">{{ p.meta.title }}</a></h2>
+        <time datetime="{{ p.meta.date }}">{{ p.meta.date }}</time>
+        <p>{{ p.meta.description or p.content[:150]|striptags }}…</p>
+    </article>
+    {% endfor %}
+</section>
+{% endblock %}
