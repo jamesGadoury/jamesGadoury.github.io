@@ -1,0 +1,46 @@
+name: Build and Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate static site in root
+        run: python generate.py
+
+      # Optionally, clean previous static files before building
+      # - name: Clean old static files
+      #   run: |
+      #     rm -rf <static_file_patterns_if_needed>
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "[bot] Rebuild GitHub Pages"
+          branch: main
+          file_pattern: |
+            *.html
+            *.css
+            *.js
+            assets/
+            images/
+            # Add patterns for all files/folders your static site needs
