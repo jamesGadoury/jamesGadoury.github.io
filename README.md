@@ -16,6 +16,15 @@ Tags: [<TAGS...>]
 <CONTENT...>
 ```
 
+To see the website you have to start an http server in the `docs` dir. From base dir:
+```bash
+python -m http.server 8000 -d docs
+```
+
+The reference [markdown syntax](https://daringfireball.net/projects/markdown/syntax).
+
+
+
 ## links to images
 - [Robot Icon](https://commons.wikimedia.org/wiki/File:Robot_icon.svg)
 

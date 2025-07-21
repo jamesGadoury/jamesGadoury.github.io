@@ -108,6 +108,24 @@ nav a {
     height: auto;
 }
 
+.post .content p {
+    padding: .5rem;
+}
+
+.post .content ul,
+.post .content ol {
+  /* vertical rhythm */
+  margin-block: 1rem;
+  /* indent the bullets/numbers */
+  padding-inline-start: 1.5rem;
+  /* keep the marker outside the text-box */
+  list-style-position: outside;
+}
+.post .content li {
+  /* small gap between items */
+  margin-block-end: .5rem;
+}
+
 .links-grid {
     display: grid;
     gap: 0.5rem;
