@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>James Gadoury</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script>
+    window.MathJax = {
+        tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[','\\]']]
+        },
+        options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+        </nav>
+    </header>
+    <main>
+        
+<article class="post">
+    <h1>tic-tac-toe</h1>
+    <time datetime="2025-08-09">2025-08-09</time>
+    <div class="content">
+        <p>Can you <a href="https://jamesgadoury.github.io/tic-tac-toe/">beat this robot at tic tac toe</a>?</p>
+<p>Unless I made a mistake in my code, you shouldn't be able to.
+Tic-tac-toe is a solved game with a <a href="https://en.wikipedia.org/wiki/Tic-tac-toe#Strategy">well defined optimal strategy</a>.
+This strategy can be programmed directly with some if/else branching. </p>
+<p>Alternatively, it can be found through dynamic programming. The tic-tac-toe "agent" programmed
+in the above link uses a value table to determine the next best move. This value table
+shows the (wait for it) value of each possible state of the tic-tac-toe board, serialized into a
+consistent format to serve as keys into the table. The state of any given board is serialized
+as 9 numbers, with 0s representing available places on the board, 1s representing
+places occupied by the agent, and 2s representing places occupied by its opponent. When it
+is the agent's turn to play, it looks at every possible next state (which would result by
+the plays available to it) and picks the one with the highest value in its table.</p>
+<p>We can run <a href="https://en.wikipedia.org/wiki/Minimax">the minimax algorithm</a> twice,
+once from the perspective of the first player, and then a second time
+from the perspective of the second player to generate a value table for each perspective.
+Key-value pairs from these two tables can be extracted and used to populate a single value table.
+The same value table can be used for either perspective, because the first player will never encounter a
+state to act on that the second player could, and vice versa. Using this table, we have an
+agent that will never lose at tic-tac-toe. Code <a href="https://github.com/jamesGadoury/tic-tac-toe">here</a>.</p>
+    </div>
+</article>
+
+    </main>
+    <footer>&copy; 2025 James Gadoury</footer>
+</body>
+
+</html>
